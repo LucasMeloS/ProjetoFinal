@@ -75,5 +75,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoFinalDAL\ProjetoFinalDAL.csproj">
+      <Project>{bd29ef3e-0927-44b7-bccb-add1cf4aec4a}</Project>
+      <Name>ProjetoFinalDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
