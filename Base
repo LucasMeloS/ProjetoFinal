@@ -1,0 +1,16 @@
+CREATE TABLE [dbo].[Categoria]
+(
+     id_categoria int identity Primary key not null
+    ,ds_categoria varchar(50)
+	
+)
+
+CREATE TABLE [dbo].[Produto]
+(
+     id_produto int identity Primary key not null
+    ,ds_produto varchar(80)
+	,valor decimal(15,2)
+    ,id_categoria int FOREIGN KEY 
+	 REFERENCES dbo.Categoria(id_categoria)
+	
+)
