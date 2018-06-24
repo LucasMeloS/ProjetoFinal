@@ -23,7 +23,7 @@ namespace ProjetoFinalDAL
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="db_info")]
-	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
+	public partial class ProjetoFinalDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -38,31 +38,31 @@ namespace ProjetoFinalDAL
     partial void DeleteProduto(Produto instance);
     #endregion
 		
-		public DataClasses1DataContext() : 
-				base(global::ProjetoFinalDAL.Properties.Settings.Default.db_infoConnectionString, mappingSource)
+		public ProjetoFinalDataContext() : 
+				base(global::ProjetoFinalDAL.Properties.Settings.Default.db_infoConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(string connection) : 
+		public ProjetoFinalDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection) : 
+		public ProjetoFinalDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public ProjetoFinalDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public ProjetoFinalDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -91,9 +91,9 @@ namespace ProjetoFinalDAL
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _codigo;
+		private int _Codigo;
 		
-		private string _descricao;
+		private string _Descricao;
 		
 		private EntitySet<Produto> _Produtos;
 		
@@ -101,10 +101,10 @@ namespace ProjetoFinalDAL
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OncodigoChanging(int value);
-    partial void OncodigoChanged();
-    partial void OndescricaoChanging(string value);
-    partial void OndescricaoChanged();
+    partial void OnCodigoChanging(int value);
+    partial void OnCodigoChanged();
+    partial void OnDescricaoChanging(string value);
+    partial void OnDescricaoChanged();
     #endregion
 		
 		public Categoria()
@@ -113,47 +113,47 @@ namespace ProjetoFinalDAL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="id_categoria", Storage="_codigo", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int codigo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="id_categoria", Storage="_Codigo", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Codigo
 		{
 			get
 			{
-				return this._codigo;
+				return this._Codigo;
 			}
 			set
 			{
-				if ((this._codigo != value))
+				if ((this._Codigo != value))
 				{
-					this.OncodigoChanging(value);
+					this.OnCodigoChanging(value);
 					this.SendPropertyChanging();
-					this._codigo = value;
-					this.SendPropertyChanged("codigo");
-					this.OncodigoChanged();
+					this._Codigo = value;
+					this.SendPropertyChanged("Codigo");
+					this.OnCodigoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ds_categoria", Storage="_descricao", DbType="VarChar(50)")]
-		public string descricao
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ds_categoria", Storage="_Descricao", DbType="VarChar(50)")]
+		public string Descricao
 		{
 			get
 			{
-				return this._descricao;
+				return this._Descricao;
 			}
 			set
 			{
-				if ((this._descricao != value))
+				if ((this._Descricao != value))
 				{
-					this.OndescricaoChanging(value);
+					this.OnDescricaoChanging(value);
 					this.SendPropertyChanging();
-					this._descricao = value;
-					this.SendPropertyChanged("descricao");
-					this.OndescricaoChanged();
+					this._Descricao = value;
+					this.SendPropertyChanged("Descricao");
+					this.OnDescricaoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Categoria_Produto", Storage="_Produtos", ThisKey="codigo", OtherKey="codigo_categoria")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Categoria_Produto", Storage="_Produtos", ThisKey="Codigo", OtherKey="CodigoCategoria")]
 		public EntitySet<Produto> Produtos
 		{
 			get
@@ -205,13 +205,13 @@ namespace ProjetoFinalDAL
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _codigo;
+		private int _Codigo;
 		
-		private string _descricao;
+		private string _Descricao;
 		
-		private System.Nullable<decimal> _valor;
+		private System.Nullable<decimal> _Valor;
 		
-		private System.Nullable<int> _codigo_categoria;
+		private System.Nullable<int> _CodigoCategoria;
 		
 		private EntityRef<Categoria> _Categoria;
 		
@@ -219,14 +219,14 @@ namespace ProjetoFinalDAL
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OncodigoChanging(int value);
-    partial void OncodigoChanged();
-    partial void OndescricaoChanging(string value);
-    partial void OndescricaoChanged();
-    partial void OnvalorChanging(System.Nullable<decimal> value);
-    partial void OnvalorChanged();
-    partial void Oncodigo_categoriaChanging(System.Nullable<int> value);
-    partial void Oncodigo_categoriaChanged();
+    partial void OnCodigoChanging(int value);
+    partial void OnCodigoChanged();
+    partial void OnDescricaoChanging(string value);
+    partial void OnDescricaoChanged();
+    partial void OnValorChanging(System.Nullable<decimal> value);
+    partial void OnValorChanged();
+    partial void OnCodigoCategoriaChanging(System.Nullable<int> value);
+    partial void OnCodigoCategoriaChanged();
     #endregion
 		
 		public Produto()
@@ -235,87 +235,87 @@ namespace ProjetoFinalDAL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="id_produto", Storage="_codigo", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int codigo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="id_produto", Storage="_Codigo", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Codigo
 		{
 			get
 			{
-				return this._codigo;
+				return this._Codigo;
 			}
 			set
 			{
-				if ((this._codigo != value))
+				if ((this._Codigo != value))
 				{
-					this.OncodigoChanging(value);
+					this.OnCodigoChanging(value);
 					this.SendPropertyChanging();
-					this._codigo = value;
-					this.SendPropertyChanged("codigo");
-					this.OncodigoChanged();
+					this._Codigo = value;
+					this.SendPropertyChanged("Codigo");
+					this.OnCodigoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ds_produto", Storage="_descricao", DbType="VarChar(80)")]
-		public string descricao
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ds_produto", Storage="_Descricao", DbType="VarChar(80)")]
+		public string Descricao
 		{
 			get
 			{
-				return this._descricao;
+				return this._Descricao;
 			}
 			set
 			{
-				if ((this._descricao != value))
+				if ((this._Descricao != value))
 				{
-					this.OndescricaoChanging(value);
+					this.OnDescricaoChanging(value);
 					this.SendPropertyChanging();
-					this._descricao = value;
-					this.SendPropertyChanged("descricao");
-					this.OndescricaoChanged();
+					this._Descricao = value;
+					this.SendPropertyChanged("Descricao");
+					this.OnDescricaoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valor", DbType="Decimal(15,2)")]
-		public System.Nullable<decimal> valor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="valor", Storage="_Valor", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Valor
 		{
 			get
 			{
-				return this._valor;
+				return this._Valor;
 			}
 			set
 			{
-				if ((this._valor != value))
+				if ((this._Valor != value))
 				{
-					this.OnvalorChanging(value);
+					this.OnValorChanging(value);
 					this.SendPropertyChanging();
-					this._valor = value;
-					this.SendPropertyChanged("valor");
-					this.OnvalorChanged();
+					this._Valor = value;
+					this.SendPropertyChanged("Valor");
+					this.OnValorChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="id_categoria", Storage="_codigo_categoria", DbType="Int")]
-		public System.Nullable<int> codigo_categoria
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="id_categoria", Storage="_CodigoCategoria", DbType="Int")]
+		public System.Nullable<int> CodigoCategoria
 		{
 			get
 			{
-				return this._codigo_categoria;
+				return this._CodigoCategoria;
 			}
 			set
 			{
-				if ((this._codigo_categoria != value))
+				if ((this._CodigoCategoria != value))
 				{
-					this.Oncodigo_categoriaChanging(value);
+					this.OnCodigoCategoriaChanging(value);
 					this.SendPropertyChanging();
-					this._codigo_categoria = value;
-					this.SendPropertyChanged("codigo_categoria");
-					this.Oncodigo_categoriaChanged();
+					this._CodigoCategoria = value;
+					this.SendPropertyChanged("CodigoCategoria");
+					this.OnCodigoCategoriaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Categoria_Produto", Storage="_Categoria", ThisKey="codigo_categoria", OtherKey="codigo", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Categoria_Produto", Storage="_Categoria", ThisKey="CodigoCategoria", OtherKey="Codigo", IsForeignKey=true)]
 		public Categoria Categoria
 		{
 			get
@@ -338,11 +338,11 @@ namespace ProjetoFinalDAL
 					if ((value != null))
 					{
 						value.Produtos.Add(this);
-						this._codigo_categoria = value.codigo;
+						this._CodigoCategoria = value.Codigo;
 					}
 					else
 					{
-						this._codigo_categoria = default(Nullable<int>);
+						this._CodigoCategoria = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Categoria");
 				}

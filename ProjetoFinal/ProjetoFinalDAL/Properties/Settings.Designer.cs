@@ -32,5 +32,16 @@ namespace ProjetoFinalDAL.Properties {
                 return ((string)(this["db_infoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-6ROJI7L\\SQLEXPRESS;Initial Catalog=db_info;Integrated Securit" +
+            "y=True")]
+        public string db_infoConnectionString1 {
+            get {
+                return ((string)(this["db_infoConnectionString1"]));
+            }
+        }
     }
 }
