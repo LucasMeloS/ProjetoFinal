@@ -213,7 +213,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "FrmProduto";
-            this.Text = "FrmProduto";
+            this.Text = "Produtos";
+            this.Load += new System.EventHandler(this.FrmProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoDataGridView)).EndInit();
             this.ResumeLayout(false);

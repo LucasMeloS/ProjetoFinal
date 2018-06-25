@@ -41,5 +41,10 @@ namespace ProjetoFinal
         {
 
         }
+
+        private void FrmProduto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
