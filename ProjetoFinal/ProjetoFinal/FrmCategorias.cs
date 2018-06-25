@@ -21,5 +21,10 @@ namespace ProjetoFinal
         {
 
         }
+
+        private void FrmCategorias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

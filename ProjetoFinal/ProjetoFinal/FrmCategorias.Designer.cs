@@ -144,7 +144,8 @@
             this.Controls.Add(this.BtnGravar);
             this.Controls.Add(this.BtnNovo);
             this.Name = "FrmCategorias";
-            this.Text = "FrmCategorias";
+            this.Text = "Categorias";
+            this.Load += new System.EventHandler(this.FrmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoriaDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             this.ResumeLayout(false);

@@ -32,67 +32,62 @@
             System.Windows.Forms.Label descricaoLabel;
             System.Windows.Forms.Label valorLabel;
             System.Windows.Forms.Label codigo_categoriaLabel;
-            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.BtnGravar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
             this.produtoDataGridView = new System.Windows.Forms.DataGridView();
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.valorTextBox = new System.Windows.Forms.TextBox();
             this.codigo_categoriaComboBox = new System.Windows.Forms.ComboBox();
+            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             descricaoLabel = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
             codigo_categoriaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // produtoBindingSource
+            // BtnNovo
             // 
-            this.produtoBindingSource.DataSource = typeof(ProjetoFinalDAL.Produto);
+            this.BtnNovo.Location = new System.Drawing.Point(148, 188);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(75, 23);
+            this.BtnNovo.TabIndex = 1;
+            this.BtnNovo.Text = "Novo";
+            this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // BtnGravar
             // 
-            this.button1.Location = new System.Drawing.Point(148, 188);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnGravar.Location = new System.Drawing.Point(245, 188);
+            this.BtnGravar.Name = "BtnGravar";
+            this.BtnGravar.Size = new System.Drawing.Size(75, 23);
+            this.BtnGravar.TabIndex = 2;
+            this.BtnGravar.Text = "Gravar";
+            this.BtnGravar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(245, 188);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Gravar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Location = new System.Drawing.Point(336, 188);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancelar.TabIndex = 3;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnExcluir
             // 
-            this.button3.Location = new System.Drawing.Point(336, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(431, 188);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Excluir";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.BtnExcluir.Location = new System.Drawing.Point(431, 188);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.BtnExcluir.TabIndex = 4;
+            this.BtnExcluir.Text = "Excluir";
+            this.BtnExcluir.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Click += new System.EventHandler(this.button4_Click);
             // 
             // produtoDataGridView
             // 
@@ -103,8 +98,7 @@
             this.produtoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn5});
+            this.dataGridViewTextBoxColumn3});
             this.produtoDataGridView.DataSource = this.produtoBindingSource;
             this.produtoDataGridView.Location = new System.Drawing.Point(97, 272);
             this.produtoDataGridView.Name = "produtoDataGridView";
@@ -167,6 +161,10 @@
             this.codigo_categoriaComboBox.Size = new System.Drawing.Size(121, 21);
             this.codigo_categoriaComboBox.TabIndex = 10;
             // 
+            // produtoBindingSource
+            // 
+            this.produtoBindingSource.DataSource = typeof(ProjetoFinalDAL.Produto);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "codigo";
@@ -189,13 +187,6 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "categoria";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Categoria";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
             // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,15 +199,15 @@
             this.Controls.Add(descricaoLabel);
             this.Controls.Add(this.descricaoTextBox);
             this.Controls.Add(this.produtoDataGridView);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnExcluir);
+            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnGravar);
+            this.Controls.Add(this.BtnNovo);
             this.Name = "FrmProduto";
             this.Text = "Produtos";
             this.Load += new System.EventHandler(this.FrmProduto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,10 +216,10 @@
         #endregion
 
         private System.Windows.Forms.BindingSource produtoBindingSource;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnGravar;
+        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.DataGridView produtoDataGridView;
         private System.Windows.Forms.TextBox descricaoTextBox;
         private System.Windows.Forms.TextBox valorTextBox;
@@ -236,6 +227,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }
