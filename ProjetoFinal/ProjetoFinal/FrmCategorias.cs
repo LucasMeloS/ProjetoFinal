@@ -26,5 +26,10 @@ namespace ProjetoFinal
         {
 
         }
+
+        private void FrmCategorias_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MeuForm.FormCategoria = null ;
+        }
     }
 }

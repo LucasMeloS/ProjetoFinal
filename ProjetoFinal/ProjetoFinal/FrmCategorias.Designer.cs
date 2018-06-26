@@ -34,9 +34,9 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.categoriaDataGridView = new System.Windows.Forms.DataGridView();
-            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LblCategoria = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaDataGridView)).BeginInit();
@@ -96,10 +96,6 @@
             this.categoriaDataGridView.Size = new System.Drawing.Size(728, 220);
             this.categoriaDataGridView.TabIndex = 5;
             // 
-            // categoriaBindingSource
-            // 
-            this.categoriaBindingSource.DataSource = typeof(ProjetoFinalDAL.Categoria);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "codigo";
@@ -114,6 +110,10 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 300;
+            // 
+            // categoriaBindingSource
+            // 
+            this.categoriaBindingSource.DataSource = typeof(ProjetoFinalDAL.Categoria);
             // 
             // LblCategoria
             // 
@@ -145,6 +145,7 @@
             this.Controls.Add(this.BtnNovo);
             this.Name = "FrmCategorias";
             this.Text = "Categorias";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmCategorias_FormClosed);
             this.Load += new System.EventHandler(this.FrmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoriaDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();

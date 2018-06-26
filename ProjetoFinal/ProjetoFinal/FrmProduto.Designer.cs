@@ -37,19 +37,48 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.produtoDataGridView = new System.Windows.Forms.DataGridView();
-            this.descricaoTextBox = new System.Windows.Forms.TextBox();
-            this.valorTextBox = new System.Windows.Forms.TextBox();
-            this.codigo_categoriaComboBox = new System.Windows.Forms.ComboBox();
-            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.descricaoTextBox = new System.Windows.Forms.TextBox();
+            this.valorTextBox = new System.Windows.Forms.TextBox();
+            this.codigo_categoriaComboBox = new System.Windows.Forms.ComboBox();
             descricaoLabel = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
             codigo_categoriaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.produtoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // descricaoLabel
+            // 
+            descricaoLabel.AutoSize = true;
+            descricaoLabel.Location = new System.Drawing.Point(35, 31);
+            descricaoLabel.Name = "descricaoLabel";
+            descricaoLabel.Size = new System.Drawing.Size(58, 13);
+            descricaoLabel.TabIndex = 5;
+            descricaoLabel.Text = "Descrição:";
+            descricaoLabel.Click += new System.EventHandler(this.descricaoLabel_Click);
+            // 
+            // valorLabel
+            // 
+            valorLabel.AutoSize = true;
+            valorLabel.Location = new System.Drawing.Point(49, 61);
+            valorLabel.Name = "valorLabel";
+            valorLabel.Size = new System.Drawing.Size(34, 13);
+            valorLabel.TabIndex = 7;
+            valorLabel.Text = "Valor:";
+            // 
+            // codigo_categoriaLabel
+            // 
+            codigo_categoriaLabel.AutoSize = true;
+            codigo_categoriaLabel.Location = new System.Drawing.Point(35, 87);
+            codigo_categoriaLabel.Name = "codigo_categoriaLabel";
+            codigo_categoriaLabel.Size = new System.Drawing.Size(55, 13);
+            codigo_categoriaLabel.TabIndex = 9;
+            codigo_categoriaLabel.Text = "Categoria:";
+            codigo_categoriaLabel.Click += new System.EventHandler(this.codigo_categoriaLabel_Click);
             // 
             // BtnNovo
             // 
@@ -107,64 +136,6 @@
             this.produtoDataGridView.TabIndex = 5;
             this.produtoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.produtoDataGridView_CellContentClick);
             // 
-            // descricaoLabel
-            // 
-            descricaoLabel.AutoSize = true;
-            descricaoLabel.Location = new System.Drawing.Point(35, 31);
-            descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(58, 13);
-            descricaoLabel.TabIndex = 5;
-            descricaoLabel.Text = "Descrição:";
-            descricaoLabel.Click += new System.EventHandler(this.descricaoLabel_Click);
-            // 
-            // descricaoTextBox
-            // 
-            this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "descricao", true));
-            this.descricaoTextBox.Location = new System.Drawing.Point(97, 28);
-            this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(409, 20);
-            this.descricaoTextBox.TabIndex = 6;
-            // 
-            // valorLabel
-            // 
-            valorLabel.AutoSize = true;
-            valorLabel.Location = new System.Drawing.Point(49, 61);
-            valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(34, 13);
-            valorLabel.TabIndex = 7;
-            valorLabel.Text = "Valor:";
-            // 
-            // valorTextBox
-            // 
-            this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "valor", true));
-            this.valorTextBox.Location = new System.Drawing.Point(97, 58);
-            this.valorTextBox.Name = "valorTextBox";
-            this.valorTextBox.Size = new System.Drawing.Size(100, 20);
-            this.valorTextBox.TabIndex = 8;
-            // 
-            // codigo_categoriaLabel
-            // 
-            codigo_categoriaLabel.AutoSize = true;
-            codigo_categoriaLabel.Location = new System.Drawing.Point(35, 87);
-            codigo_categoriaLabel.Name = "codigo_categoriaLabel";
-            codigo_categoriaLabel.Size = new System.Drawing.Size(55, 13);
-            codigo_categoriaLabel.TabIndex = 9;
-            codigo_categoriaLabel.Text = "Categoria:";
-            codigo_categoriaLabel.Click += new System.EventHandler(this.codigo_categoriaLabel_Click);
-            // 
-            // codigo_categoriaComboBox
-            // 
-            this.codigo_categoriaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "codigo_categoria", true));
-            this.codigo_categoriaComboBox.FormattingEnabled = true;
-            this.codigo_categoriaComboBox.Location = new System.Drawing.Point(97, 84);
-            this.codigo_categoriaComboBox.Name = "codigo_categoriaComboBox";
-            this.codigo_categoriaComboBox.Size = new System.Drawing.Size(121, 21);
-            this.codigo_categoriaComboBox.TabIndex = 10;
-            // 
-            // produtoBindingSource
-            // 
-            this.produtoBindingSource.DataSource = typeof(ProjetoFinalDAL.Produto);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "codigo";
@@ -187,6 +158,35 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
+            // produtoBindingSource
+            // 
+            this.produtoBindingSource.DataSource = typeof(ProjetoFinalDAL.Produto);
+            // 
+            // descricaoTextBox
+            // 
+            this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "descricao", true));
+            this.descricaoTextBox.Location = new System.Drawing.Point(97, 28);
+            this.descricaoTextBox.Name = "descricaoTextBox";
+            this.descricaoTextBox.Size = new System.Drawing.Size(409, 20);
+            this.descricaoTextBox.TabIndex = 6;
+            // 
+            // valorTextBox
+            // 
+            this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "valor", true));
+            this.valorTextBox.Location = new System.Drawing.Point(97, 58);
+            this.valorTextBox.Name = "valorTextBox";
+            this.valorTextBox.Size = new System.Drawing.Size(100, 20);
+            this.valorTextBox.TabIndex = 8;
+            // 
+            // codigo_categoriaComboBox
+            // 
+            this.codigo_categoriaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "codigo_categoria", true));
+            this.codigo_categoriaComboBox.FormattingEnabled = true;
+            this.codigo_categoriaComboBox.Location = new System.Drawing.Point(97, 84);
+            this.codigo_categoriaComboBox.Name = "codigo_categoriaComboBox";
+            this.codigo_categoriaComboBox.Size = new System.Drawing.Size(121, 21);
+            this.codigo_categoriaComboBox.TabIndex = 10;
+            // 
             // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +205,7 @@
             this.Controls.Add(this.BtnNovo);
             this.Name = "FrmProduto";
             this.Text = "Produtos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmProduto_FormClosed);
             this.Load += new System.EventHandler(this.FrmProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.produtoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();

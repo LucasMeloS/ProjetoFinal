@@ -46,5 +46,10 @@ namespace ProjetoFinal
         {
 
         }
+
+        private void FrmProduto_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MeuForm.FormProduto = null;
+        }
     }
 }

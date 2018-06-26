@@ -8,9 +8,9 @@ namespace ProjetoFinal
 {
     public class MeuForm
     {
-        public static Form2 FormCategoria { get; set; }
-        public static Form3 FormProduto { get; set; }
+        public static FrmCategorias FormCategoria { get; set; }
+        public static FrmProduto FormProduto { get; set; }
 
-
+        
     }
 }
